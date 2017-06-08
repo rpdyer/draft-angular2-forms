@@ -1,0 +1,48 @@
+<div class="container">
+  <h3>Customer Form</h3>
+
+  <form #form="ngForm" novalidate>
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" placeholder="First Name" name="firstName" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" placeholder="Last Name" name="lastName" ngModel>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="is-verified" ngModel>
+        Is Verified
+      </label>
+    </div>
+    <label>Customer Type</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="customer-type" value="residential" checked>
+        Residential
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="customer-type" value="business">
+        Business
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Primaray Language</label>
+      <select class="form-control">
+        <option *ngFor="let lang of languages">
+          {{lang}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Date Added</label>
+      <input type="date" class="form-control">
+    </div>
+
+    <button class="btn btn-primary" type="submit">Ok</button>
+  </form>
+
+</div>
